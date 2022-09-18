@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Assignment1
 
 on:
   push:
@@ -15,4 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: |
+        echo "${{ secrets.DOCKERPWD }}" | docker login -u "punitjain17" --password-stdin
+        docker image build -t punitjain17/assigment:latest .
+        docker push punitjain17/assignment:latest
+      
