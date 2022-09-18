@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: |
         echo "${{ secrets.DOCKERPWD }}" | docker login -u "punitjain17" --password-stdin
-        docker build -f Dockerfile -t latest .
+        docker build -f Dockerfile -t punitjain17/mytomcatimage:latest .
         docker push punitjain17/mytomcatimage:latest
       
