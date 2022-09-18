@@ -18,5 +18,5 @@ jobs:
       run: |
         echo "${{ secrets.DOCKERPWD }}" | docker login -u "punitjain17" --password-stdin
         docker build -f Dockerfile -t latest .
-        docker push punitjain17/assignment
+        docker push punitjain17/mytomcatimage
       
