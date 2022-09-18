@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: |
         echo "${{ secrets.DOCKERPWD }}" | docker login -u "punitjain17" --password-stdin
-        docker build --file ./Dockerfile --tag $DOCKER_REPOSITORY/$IMAGE_NAME:$IMAGE_TAG
+        docker build --file ./Dockerfile --t $DOCKER_REPOSITORY/$IMAGE_NAME:$IMAGE_TAG
         docker push punitjain17/assignment:latest
       
