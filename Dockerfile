@@ -27,4 +27,4 @@ COPY ./index.html index.html
 COPY ./script.js script.js
 COPY ./style.css style.css
 CMD ["/app/main"]
-EXPOSE 30000
+EXPOSE 3000
